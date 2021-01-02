@@ -21,8 +21,17 @@ public class UserRegistration {
 		return patternValidity;	
 	}
 	
+	public static boolean Email() {
+		Pattern email = Pattern.compile("^[a-zA-Z]{3}\\.[a-zA-Z]{1,}@[a-zA-Z]{2}\\.[a-zA-Z]{2}\\.[a-zA-Z]{1,}$");  
+		Matcher match = email.matcher("abc.xyz@bl.co.in");  
+		boolean patternValidity = match.matches();
+		System.out.println(patternValidity);
+		return patternValidity;
+	}
+	
 	public static void main(String args[]) {
 		FirstName();
 		LastName();
+		Email();
 	}
 }

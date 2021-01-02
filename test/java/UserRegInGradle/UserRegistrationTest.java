@@ -10,9 +10,11 @@ public class UserRegistrationTest {
 		UserRegistration ur = new UserRegistration();
 		boolean generated_output1 = ur.FirstName();
 		boolean generated_output2 = ur.LastName();
+		boolean generated_output3 = ur.Email();
 		
 		//Assert Statement
 		assertTrue(generated_output1);
 		assertTrue(generated_output2);
+		assertTrue(generated_output3);
 }
 }
