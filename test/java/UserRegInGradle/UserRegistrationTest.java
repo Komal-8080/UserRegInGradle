@@ -12,11 +12,13 @@ public class UserRegistrationTest {
 		boolean generated_output2 = ur.LastName();
 		boolean generated_output3 = ur.Email();
 		boolean generated_output4 = ur.MobileNumber();
+		boolean generated_output5 = ur.Password();
 		
 		//Assert Statement
 		assertTrue(generated_output1);
 		assertTrue(generated_output2);
 		assertTrue(generated_output3);
 		assertTrue(generated_output4);
+		assertTrue(generated_output5);
 }
 }

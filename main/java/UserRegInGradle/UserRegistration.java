@@ -37,10 +37,19 @@ public class UserRegistration {
 		return patternValidity;		
 	}
 	
+	public static boolean Password() {
+		Pattern mobileNumber = Pattern.compile("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}");  
+		Matcher match = mobileNumber.matcher("Komal@80");  
+		boolean patternValidity = match.matches();
+		System.out.println(patternValidity);
+		return patternValidity;
+	}
+	
 	public static void main(String args[]) {
 		FirstName();
 		LastName();
 		Email();
 		MobileNumber(); 
+		Password();
 	}
 }
