@@ -13,7 +13,16 @@ public class UserRegistration {
 		return patternValidity;		
 	}
 	
+	public static boolean LastName() {		
+		Pattern lastName = Pattern.compile("[A-Z]{1}[a-z]{2,}$");  
+		Matcher match = lastName.matcher("Shinde");  
+		boolean patternValidity = match.matches();
+		System.out.println(patternValidity);
+		return patternValidity;	
+	}
+	
 	public static void main(String args[]) {
 		FirstName();
+		LastName();
 	}
 }
