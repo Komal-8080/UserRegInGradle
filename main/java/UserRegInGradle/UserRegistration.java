@@ -29,9 +29,18 @@ public class UserRegistration {
 		return patternValidity;
 	}
 	
+	public static boolean MobileNumber() {
+		Pattern mobileNumber = Pattern.compile("^[1-9]{2}\\s{1}[0-9]{1}[0-9]{9}$");  
+		Matcher match = mobileNumber.matcher("91 8562416354");  
+		boolean patternValidity = match.matches();
+		System.out.println(patternValidity);
+		return patternValidity;		
+	}
+	
 	public static void main(String args[]) {
 		FirstName();
 		LastName();
 		Email();
+		MobileNumber(); 
 	}
 }
